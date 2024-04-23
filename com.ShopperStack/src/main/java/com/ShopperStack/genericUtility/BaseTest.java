@@ -44,13 +44,15 @@ public class BaseTest {
 	@BeforeTest
 	public void bt() {
 		System.out.println("Before Test");
-		report=new ExtentReports();
-		report.attachReporter(spark);
-		test=report.createTest("demo");
+		
 	}
 	
 	@BeforeClass
 	public void bc() throws IOException {
+		
+		report=new ExtentReports();
+		report.attachReporter(spark);
+		test=report.createTest("demo");
 		String url=file.readPropertyData("url");
 		String browser=file.readPropertyData("browser");
 		System.out.println("Before Class");
@@ -95,12 +97,13 @@ public class BaseTest {
 		System.out.println("After Class");
 		Thread.sleep(3000);
 		driver.quit();
+		report.flush();
 	}
 	
 	@AfterTest
 	public void at() {
 		System.out.println("After Test");
-		report.flush();
+		
 	}
 	
 	@AfterSuite
