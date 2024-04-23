@@ -80,7 +80,7 @@
 						<version>3.2.5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>deleteAddress.xml</suiteXmlFile>
+								<suiteXmlFile>deleteaddress.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
