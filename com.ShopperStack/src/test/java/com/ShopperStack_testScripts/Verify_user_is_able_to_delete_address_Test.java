@@ -11,6 +11,7 @@ public class Verify_user_is_able_to_delete_address_Test extends BaseTest{
 	
 	@Test
 	public void addAddress() throws InterruptedException {
+		
 		homePage.getAccountBtn().click();
 		homePage.getMyProfileBtn().click();
 		
@@ -19,12 +20,11 @@ public class Verify_user_is_able_to_delete_address_Test extends BaseTest{
 		
 		MyAddressPage myAddressPage=new MyAddressPage(driver);
 		myAddressPage.getDeleteAdress().click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		myAddressPage.getYesBtn().click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver.switchTo().alert().accept();
-		Thread.sleep(3000);
-		homePage.getMyProfileBtn().click();
-		homePage.getLogOutBtn().click();
+		Thread.sleep(2000);
+		
 	}
 }

@@ -66,7 +66,7 @@ public class BaseTest {
 		listenerDrivers=driver;
 		homePage=new HomePage(driver);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.get(url);
 	}
 	
@@ -76,9 +76,8 @@ public class BaseTest {
 		test.log(Status.INFO, "navigated");
 		
 		WelcomePage welcomePage=new WelcomePage(driver);
-		Thread.sleep(10000);
 		welcomePage.getLoginButton().click();
-		
+		//Login
 		LoginPage loginPage=new LoginPage(driver);
 		loginPage.getEmailTf().sendKeys(file.readPropertyData("un"));
 		loginPage.getPwdTf().sendKeys(file.readPropertyData("pwd"));

@@ -1,6 +1,5 @@
 package com.ShopperStack_testScripts;
 
-import java.io.File;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -17,13 +16,8 @@ public class Verify_user_is_able_to_add_address_Test extends BaseTest {
 
 	@Test
 	public void addAddress() throws IOException {
-		WelcomePage welcomePage=new WelcomePage(driver);
-		welcomePage.getLoginButton().click();
-	
-		LoginPage loginPage=new LoginPage(driver);
-		loginPage.getEmailTf().sendKeys(file.readPropertyData("un"));
-		loginPage.getPwdTf().sendKeys(file.readPropertyData("pwd"));
-		loginPage.getLoginButton().click();
+		
+		
 		
 		HomePage homePage=new HomePage(driver);
 		homePage.getAccountBtn().click();
@@ -49,8 +43,6 @@ public class Verify_user_is_able_to_add_address_Test extends BaseTest {
 		addressFormPage.getPhoneNumberTf().sendKeys(file.readExcelData("Sheet2",1,5));
 		addressFormPage.getAddAdressBtn().click();
 		
-		homePage.getAccountBtn().click();
-		homePage.getLogOutBtn().click();
 		
 	}
 }

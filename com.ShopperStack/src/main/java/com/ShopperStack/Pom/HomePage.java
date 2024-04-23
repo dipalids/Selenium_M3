@@ -11,7 +11,7 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//div[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-bjoz8z']")
+	@FindBy(xpath = "//span[contains(@class,'BaseBadge-badge')]")
 	private WebElement accountBtn;
 	
 	@FindBy(xpath="//li[text()='My Profile']")

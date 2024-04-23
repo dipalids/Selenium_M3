@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ShopperStack_testScripts.Verify_user_is_able_to_delete_address_Test">
+      <class name="com.ShopperStack_testScripts.Verify_user_is_able_to_add_address_Test">
         <methods>
           <include name="bm"/>
           <include name="addAddress"/>
@@ -15,7 +15,7 @@
           <include name="am"/>
           <include name="at"/>
         </methods>
-      </class> <!-- com.ShopperStack_testScripts.Verify_user_is_able_to_delete_address_Test -->
+      </class> <!-- com.ShopperStack_testScripts.Verify_user_is_able_to_add_address_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
