@@ -53,8 +53,13 @@ public class BaseTest {
 		report=new ExtentReports();
 		report.attachReporter(spark);
 		test=report.createTest("demo");
-		String url=file.readPropertyData("url");
-		String browser=file.readPropertyData("browser");
+		
+		String url=System.getProperty("url");
+		String browser=System.getProperty("browser");
+		
+		//String url=file.readPropertyData("url");
+		//String browser=file.readPropertyData("browser");
+		
 		System.out.println("Before Class");
 		if(browser.equals("chrome")) {
 			driver=new ChromeDriver();
